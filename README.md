@@ -69,9 +69,6 @@ class Student {
 
 	@Field(name = "rollNo")
 	private Integer rollNo;
-
-	@Field(name = "courseId")
-	private Short courseId;
   
  	Student(String firstName, String lastName, Integer rollNo) {
 		this.firstName = firstName;
