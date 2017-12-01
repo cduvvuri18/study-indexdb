@@ -1,20 +1,26 @@
-Study and learn how indexes work in databases
-=============================================
+Study and learn how indexes work in databases. Written in Java
+==============================================================
 
 The primary objective of study-indexdb is to understand how indexes work with some real usecases, which I believe gives better grasp of these concepts. One can try out or extend my code in their test/school projects to use and dig deeper into the indexes.
 
 As I am myself beginer to these concepts, I will continue to evolve the project with the better design, optimizations, etc but will make sure implementation stay simple to understand. Any updates will be posted here.
 
+This project currently has 3 algorithms:
+
+[BTree - Disk based implementation](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/persistent/btree)
+
+[AVLTree - In memeory](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/inmem/avltree)
+
+[RedBlackTree - In memory](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/inmem/redblack)
+
 
 ## Getting Started
 
-This project currently has 3 algorithms. More to follow. Next in line R-Tree.
-
-[BTree](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/persistent/btree)
+**BTRee**
 
 References: CLRS/Adam Drozdek/wiki. BTree is omnipresent :-).
 
-**Create BTree**
+***Create BTree***
 
 While providing the folder path @ which index file is expected to create, do not provide the file name. Index file is created with the simple class name of the key(Looks weird right..I will fix this later).
 
@@ -94,7 +100,7 @@ IndexFactory<StudentKey, Student> idxFactory = new BTreeFactory<StudentKey, Stud
 DBIndex<StudentKey, Student> index = idxFactory.create(StudentKey.class, Student.class, Paths.get("<absolute_path_do_not_mention_index_file_name>"));
 ```
 
-**insert, search, delete, successor**
+***insert, search, delete, successor***
 ```
 //After create btree step, invoke init
 index.init();
@@ -114,7 +120,7 @@ index.close();
 ```
 All the operations performed above are persistent on disk. 
 
-**Open BTree.**
+***Open BTree.***
 
 While mentioning the path, do not provide the file name. BTree will look up for index file with the simple class name of the key provided in the given path(Looks weird right..I will fix this later).
 
@@ -130,11 +136,8 @@ index.close();
 ```
 *Refer the test cases for more details*
 
-[AVLTree (In memeory)](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/inmem/avltree)
 
-[RedBlackTree (In memory)](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/inmem/redblack)
-
-*None of these algorithms are thread safe*
+*None of these algorithm implementations are thread safe*
 
 In Progress..
 
