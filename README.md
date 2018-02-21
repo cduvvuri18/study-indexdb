@@ -1,4 +1,4 @@
-Study and learn how to implement indexes to create disk based databases. Written purely in Java.
+Study and learn how to implement disk based index databases work. Purely written in Java.
 ================================================================================================
 
 The primary objective of study-indexdb is to understand the implementation of the indexes with some real usecases, which I believe gives better grasp of these concepts. One can try out or extend my code in their test/school projects to use and dig deeper into the indexes.
