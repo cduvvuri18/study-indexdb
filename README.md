@@ -1,7 +1,7 @@
-Study and learn how indexes work in databases. Written in Java
-==============================================================
+Study and learn how to implement indexes to create disk based databases. Written purely in Java.
+================================================================================================
 
-The primary objective of study-indexdb is to understand how indexes work with some real usecases, which I believe gives better grasp of these concepts. One can try out or extend my code in their test/school projects to use and dig deeper into the indexes.
+The primary objective of study-indexdb is to understand the implementation of the indexes with some real usecases, which I believe gives better grasp of these concepts. One can try out or extend my code in their test/school projects to use and dig deeper into the indexes.
 
 As I am myself beginer to these concepts, I will continue to evolve the project with the better design, optimizations, etc but will make sure implementation stay simple to understand. Any updates will be posted here.
 
@@ -18,7 +18,11 @@ This project currently has 3 algorithms:
 
 **BTRee**
 
-References: CLRS/Adam Drozdek/wiki. BTree is omnipresent :-).
+BTree is purely implemented in Java and it is disk based implementation.
+
+References: CLRS/Adam Drozdek/wiki. BTree is omnipresent :-). 
+
+Below are the steps to use the BTree If one want to export it as library. If the intent of the viewer is to understand the disk based implementation of BTree, then I would suggest to start with the test cases. [BTree - Disk based implementation](https://github.com/cduvvuri18/study-indexdb/tree/master/src/main/java/com/cduvvuri/sidb/persistent/btree).  
 
 ***Create BTree***
 
